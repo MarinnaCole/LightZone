@@ -177,9 +177,10 @@ public class ExportDialog extends JFileChooser {
                 ExportLogic.mergeExportOptions(oldOptions, newOptions);
             }
             ExportControls ctrls = new ExportControls(newOptions, true);
+            WatermarkControls wmCtrls = new WatermarkControls(newOptions);
 
             // Keep track of the expanded/collapsed state of the controls toggle:
-            ExportCtrlToggle toggle = new ExportCtrlToggle(ctrls, dialog);
+            ExportCtrlToggle toggle = new ExportCtrlToggle(ctrls, wmCtrls, dialog);
 
             controls = Box.createVerticalBox();
             controls.add(toggle);

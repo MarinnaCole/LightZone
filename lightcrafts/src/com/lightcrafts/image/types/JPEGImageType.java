@@ -66,6 +66,7 @@ public class JPEGImageType extends ImageType implements TrueImageTypeProvider {
         ////////// public /////////////////////////////////////////////////////
 
         public final QualityOption quality;
+        public final TransparencyOption transparency;
 
         /**
          * Construct an <code>ExportOptions</code>.
@@ -103,6 +104,7 @@ public class JPEGImageType extends ImageType implements TrueImageTypeProvider {
         protected ExportOptions( ImageType instance ) {
             super( instance );
             quality = new QualityOption( 85, this );
+            transparency = new TransparencyOption( 0, this);
         }
     }
 

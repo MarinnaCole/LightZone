@@ -124,7 +124,8 @@ public class ExportMultiControls extends JPanel implements ItemListener {
                 ExportLogic.mergeExportOptions(oldOptions, newOptions);
             }
             ExportControls ctrls = new ExportControls(newOptions, textResize);
-            toggle = new ExportCtrlToggle(ctrls, window);
+            WatermarkControls wmCtrls = new WatermarkControls(newOptions);
+            toggle = new ExportCtrlToggle(ctrls, wmCtrls, window);
 
             removeAll();
 
